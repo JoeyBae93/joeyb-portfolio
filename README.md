@@ -7,19 +7,19 @@ The portfolio is built as a highly responsive, modern single-page application us
 ---
 
 ## 🚀 Live Site
-Check out the live portfolio: **[joeyb-portfolio](https://joeybae.github.io/joeyb-portfolio)** *(or your configured GitHub Pages URL)*
+
+Check out the live portfolio: **[joeyb-portfolio](https://joeybae.github.io/joeyb-portfolio)** _(or your configured GitHub Pages URL)_
 
 ---
 
-## 🛠️ Tech Stack & Tools (Why This Architecture?)
+## 🛠️ Tech Stack & Tools
 
-To build a modern, high-performance, and cost-effective portfolio, the following tech stack was chosen:
-
-*   **Next.js 16 (App Router)**: Chosen for its modern react capabilities and robust static site generation (`output: "export"`), allowing hosting on free static platforms (GitHub Pages) while maintaining excellent load times and SEO.
-*   **React 19 & TypeScript**: Provides strict type safety, modular UI components (reusable cards, custom buttons), and helps write predictable front-end state management.
-*   **Tailwind CSS v4 & PostCSS**: Used to build a responsive, custom dark-mode portfolio with modern styling tokens (like custom grids and premium gradients) without writing excessive CSS.
-*   **Web3Forms API**: Enables direct, secure contact form submissions without requiring a separate backend database or API routes, keeping the site 100% serverless, fast, and secure.
-*   **GitHub Actions (CI/CD) & GitHub Pages**: Implements a pipeline where pushing code to the `main` branch automatically triggers static export and deploys the site, ensuring zero-downtime and automated updates.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with PostCSS
+- **Forms**: [Web3Forms API](https://web3forms.com/) for email delivery
+- **CI/CD / Deployment**: [GitHub Actions](https://github.com/features/actions) & [GitHub Pages](https://pages.github.com/)
 
 ---
 
@@ -80,6 +80,7 @@ NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
 ### GitHub Pages Settings (`next.config.ts`)
 
 To allow Next.js to export static files and host them properly under GitHub Pages subpaths:
+
 - `output: "export"` (configured for static exports)
 - `images.unoptimized: true` (disables Next.js default image optimization, which requires a Node server)
 - `basePath: "/joeyb-portfolio"` (prefixes asset links with the repository name)
@@ -89,20 +90,24 @@ To allow Next.js to export static files and host them properly under GitHub Page
 ## 💻 Local Development
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/joeybae/joeyb-portfolio.git
    cd joeyb-portfolio
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Run the development server:**
+
    ```bash
    npm run dev
    ```
+
    Open [http://localhost:3000](http://localhost:3000) with your browser to view it.
 
 4. **Linting:**
@@ -115,12 +120,15 @@ To allow Next.js to export static files and host them properly under GitHub Page
 ## 📦 Build & Deployment
 
 ### Manual Static Build
+
 To build and export the site locally into a static `./out` folder:
+
 ```bash
 npm run build
 ```
 
 ### Automated GitHub Pages Deployment
+
 This repository is configured with a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the site whenever changes are pushed to the `main` branch:
 
 1. Code is checked out and built statically (`npm run build`).
@@ -130,4 +138,5 @@ This repository is configured with a GitHub Actions workflow (`.github/workflows
 ---
 
 ## 📄 License
+
 This project is open-source. Feel free to clone or customize it for your own portfolio.
