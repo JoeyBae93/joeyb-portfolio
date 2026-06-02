@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,   // Required for free GitHub Pages static hosting
   },
-
-  basePath: "/joeyb-portfolio",
 };
 
 export default nextConfig;
